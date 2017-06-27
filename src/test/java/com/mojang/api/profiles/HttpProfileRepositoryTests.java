@@ -45,7 +45,8 @@ public class HttpProfileRepositoryTests {
         assertThat(actual, hasItemInArray(hasProperty("name", CoreMatchers.is("someOtherName"))));
     }
 
-    private void setProfilesForUrl(HttpClient mock, URL url, Profile[] profiles) throws IOException {
+    @SuppressWarnings("unchecked")
+	private void setProfilesForUrl(HttpClient mock, URL url, Profile[] profiles) throws IOException {
         String jsonString = gson.toJson(profiles);
         when(mock.post(eq(url), any(HttpBody.class), anyList())).thenReturn(jsonString);
     }

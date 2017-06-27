@@ -7,7 +7,6 @@ import org.junit.runners.JUnit4;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
-import static org.junit.Assert.fail;
 
 @RunWith(JUnit4.class)
 public class HttpProfileRepositoryIntegrationTests {
